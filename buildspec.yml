@@ -6,10 +6,18 @@ phases:
   build:
     commands:
       - dotnet build Bank/Bank.csproj
+      - dotnet test Bank/BankTest.csproj --logger trx --results-directory ./TestResults
   post_build:
     commands:
       - dotnet publish -r linux-x64 Bank/Bank.csproj
+reports:
+  dotnetcicdtest:
+    files:
+      - '**/*'
+    base-directory: './TestResults'
+    file-format: VisualStudioTrx
 artifacts:
   files:
     - Bank/bin/Debug/net6.0/linux-x64/publish/**/*
   discard-paths: yes
+  

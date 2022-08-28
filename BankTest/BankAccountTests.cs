@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using BankAccountNS;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Assert = NUnit.Framework.Assert;
+using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 using StringAssert = Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert;
 
 
