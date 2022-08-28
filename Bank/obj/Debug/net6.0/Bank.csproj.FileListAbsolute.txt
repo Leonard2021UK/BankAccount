@@ -1,0 +1,15 @@
+/home/leo/RiderProjects/Bank/Bank/bin/Debug/net6.0/Bank
+/home/leo/RiderProjects/Bank/Bank/bin/Debug/net6.0/Bank.deps.json
+/home/leo/RiderProjects/Bank/Bank/bin/Debug/net6.0/Bank.runtimeconfig.json
+/home/leo/RiderProjects/Bank/Bank/bin/Debug/net6.0/Bank.dll
+/home/leo/RiderProjects/Bank/Bank/bin/Debug/net6.0/ref/Bank.dll
+/home/leo/RiderProjects/Bank/Bank/bin/Debug/net6.0/Bank.pdb
+/home/leo/RiderProjects/Bank/Bank/obj/Debug/net6.0/Bank.csproj.AssemblyReference.cache
+/home/leo/RiderProjects/Bank/Bank/obj/Debug/net6.0/Bank.GeneratedMSBuildEditorConfig.editorconfig
+/home/leo/RiderProjects/Bank/Bank/obj/Debug/net6.0/Bank.AssemblyInfoInputs.cache
+/home/leo/RiderProjects/Bank/Bank/obj/Debug/net6.0/Bank.AssemblyInfo.cs
+/home/leo/RiderProjects/Bank/Bank/obj/Debug/net6.0/Bank.csproj.CoreCompileInputs.cache
+/home/leo/RiderProjects/Bank/Bank/obj/Debug/net6.0/Bank.dll
+/home/leo/RiderProjects/Bank/Bank/obj/Debug/net6.0/ref/Bank.dll
+/home/leo/RiderProjects/Bank/Bank/obj/Debug/net6.0/Bank.pdb
+/home/leo/RiderProjects/Bank/Bank/obj/Debug/net6.0/Bank.genruntimeconfig.cache
