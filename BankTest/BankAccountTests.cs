@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using BankAccountNS;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -40,7 +41,7 @@ namespace BankTests
             {
                 account.Debit(debitAmount);
             }
-            catch (System.ArgumentOutOfRangeException e)
+            catch (ArgumentOutOfRangeException e)
             {
                 // Assert
                 StringAssert.Contains(e.Message, BankAccount.DebitAmountLessThanZeroMessage);
@@ -49,6 +50,32 @@ namespace BankTests
             
             Assert.Fail("The expected exception was not thrown.");
 
+        }
+        
+        [TestMethod]
+        public void Credit_WithValidAmount_UpdatesBalance()
+        {
+            // Arrange
+            double beginningBalance = 10.15;
+            double creditAmount = 15.15;
+            double expected = 25.30;
+            BankAccount account = new BankAccount("Mr. Bryan Walton", beginningBalance);
+        
+            // Act
+            try
+            {
+                account.Credit(creditAmount);
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                StringAssert.Contains(e.Message, BankAccount.DebitAmountLessThanZeroMessage);
+                return;
+            }
+            
+        
+            // Assert
+            double actual = account.Balance;
+            Assert.AreEqual(expected, actual, 0.001, "Account not credited correctly");
         }
     }
 }
