@@ -6,7 +6,7 @@ phases:
   build:
     commands:
       - dotnet build Bank/Bank.csproj
-      - dotnet test Bank/BankTest.csproj --logger trx --results-directory ./TestResults
+      - dotnet test Bank/BankTest --logger trx --results-directory ./TestResults
   post_build:
     commands:
       - dotnet publish -r linux-x64 Bank/Bank.csproj
