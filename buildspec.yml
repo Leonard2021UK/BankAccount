@@ -1,1 +1,15 @@
-
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      dotnet: 6.0
+  build:
+    commands:
+      - dotnet build Bank/Bank.csproj
+  post_build:
+    commands:
+      - dotnet publish -r linux-x64 Bank/Bank.csproj
+artifacts:
+  files:
+    - Bank/bin/Debug/net6.0/linux-x64/publish/**/*
+  discard-paths: yes
