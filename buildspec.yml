@@ -3,8 +3,8 @@ phases:
   install:
     runtime-versions:
       dotnet: 6.0
-      commands:
-        - npm install -g aws-cdk
+    commands:
+      - npm install -g aws-cdk
   build:
     commands:
       - dotnet build Bank/Bank.csproj
