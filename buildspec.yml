@@ -12,6 +12,7 @@ phases:
       - pwd
       - ls
       - cd bankinfra
+      - ls
       - cdk synth
       - cd ..
   post_build:
