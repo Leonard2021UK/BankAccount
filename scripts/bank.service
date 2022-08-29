@@ -1,0 +1,11 @@
+[Unit]
+Description=Bank API
+After=network.target
+
+[Service]
+ExecStart=/webapps/bank/Bank --urls http://*:5000
+User=ec2-user
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

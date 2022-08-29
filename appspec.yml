@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: binaries
+    destination: /webapps/bank/
+  - source: scripts/bank.service
+    destination: /etc/systemd/system
+hooks:
+  AfterInstall:
+    - location: scripts/bank.sh
+      timeout: 30
