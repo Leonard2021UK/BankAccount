@@ -9,6 +9,7 @@ phases:
     commands:
       - dotnet build Bank/Bank.csproj
       - dotnet test BankTest --logger trx --results-directory ./TestResults
+      - pwd
       - cd bankinfra
       - cdk synth
       - cd ..
