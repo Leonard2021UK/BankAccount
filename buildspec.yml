@@ -10,6 +10,7 @@ phases:
       - dotnet build Bank/Bank.csproj
       - dotnet test BankTest --logger trx --results-directory ./TestResults
       - pwd
+      - ls
       - cd bankinfra
       - cdk synth
       - cd ..
