@@ -3,10 +3,15 @@ phases:
   install:
     runtime-versions:
       dotnet: 6.0
+      commands:
+        - npm install -g aws-cdk
   build:
     commands:
       - dotnet build Bank/Bank.csproj
       - dotnet test BankTest --logger trx --results-directory ./TestResults
+      - cd bankinfra
+      - cdk synth
+      - cd ..
   post_build:
     commands:
       - dotnet publish -r linux-x64 Bank/Bank.csproj
@@ -20,4 +25,9 @@ artifacts:
   files:
     - Bank/bin/Debug/net6.0/linux-x64/publish/**/*
   discard-paths: yes
+  secondary-artifacts:
+    cloudformation:
+      files:
+        - bankinfra/cdk.out/BankinfraStack.template.json
+      discard-paths: yes
   
