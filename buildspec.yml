@@ -14,6 +14,7 @@ phases:
       - cd bankinfra
       - ls
       - cdk synth
+      - cat cdk.out/BankinfraStack.template.json
       - cd ..
   post_build:
     commands:
