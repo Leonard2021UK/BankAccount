@@ -29,11 +29,11 @@ namespace Bankinfra
                 // Uncomment the next block if you know exactly what Account and Region you
                 // want to deploy the stack to.
                 
-                Env = new Amazon.CDK.Environment
-                {
-                    Account = "851518138075",
-                    Region = "eu-west-1",
-                }
+                // Env = new Amazon.CDK.Environment
+                // {
+                //     Account = "851518138075",
+                //     Region = "eu-west-1",
+                // }
                 
 
                 // For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
