@@ -19,7 +19,7 @@ phases:
     commands:
       - dotnet publish -r linux-x64 Bank/Bank.csproj
       - mkdir binaries
-      - cp -r src/bin/Debug/net6.0/linux-x64/publish/* binaries
+      - cp -r Bank/bin/Debug/net6.0/linux-x64/publish/* binaries
 reports:
   dotnetcicdtest:
     files:
