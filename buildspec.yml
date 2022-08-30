@@ -9,10 +9,8 @@ phases:
     commands:
       - dotnet build Bank/Bank.csproj
       - dotnet test BankTest --logger trx --results-directory ./TestResults
-      - pwd
-      - ls
+      - echo $CODEBUILD_SRC_DIR
       - cd bankinfra
-      - ls
       - cdk synth
       - cat cdk.out/BankinfraStack.template.json
       - cd ..
