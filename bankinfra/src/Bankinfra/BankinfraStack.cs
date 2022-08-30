@@ -1,6 +1,8 @@
 using Amazon.CDK;
 using Amazon.CDK.AWS.EC2;
 using Constructs;
+using Amazon.CDK.AWS.IAM;
+
 
 namespace Bankinfra
 {
@@ -34,6 +36,9 @@ namespace Bankinfra
             ec2.UserData.AddCommands("chmod +x ./install");
             ec2.UserData.AddCommands("./install auto");
             ec2.UserData.AddCommands("service codedeploy-agent start");
+
+			ec2.Role.AddManagedPolicy(ManagedPolicy.FromManagedPolicyArn(this, "bank_policy", "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeploy"));
+
         }
     }
 }
