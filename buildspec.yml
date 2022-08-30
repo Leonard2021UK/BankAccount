@@ -40,5 +40,6 @@ artifacts:
       files:
         - binaries/**/*
         - scripts/**/*
+        - appspec.yml
       discard-paths: no
   
